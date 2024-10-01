@@ -8,8 +8,8 @@ inputs:
     metadata: https://data.nextstrain.org/files/ncov/open/reference/metadata.tsv.xz
     aligned: https://data.nextstrain.org/files/ncov/open/reference/aligned.fasta.xz
   - name: custom_data
-    metadata: data/idaho.metadata.tsv
-    sequences: data/idaho.sequences.fasta
+    metadata: data/RuskCounty.metadata.tsv
+    sequences: data/RuskCounty.sequences.fasta
   - name: background_data
     metadata: https://data.nextstrain.org/files/ncov/open/north-america/metadata.tsv.xz
     aligned: https://data.nextstrain.org/files/ncov/open/north-america/aligned.fasta.xz
@@ -22,9 +22,9 @@ refine:
 # The build name will be "idaho" and it will use the custom
 # subsampling scheme defined below.
 builds:
-  idaho:
-    title: "Idaho-specific genomic surveillance build"
-    subsampling_scheme: idaho_scheme
+  rusk:
+    title: "Rusk County-specific genomic surveillance build"
+    subsampling_scheme: rusk_scheme
     # Defines colorings for input data sources
     # (e.g. "background_data" is "yes" or "no").
     auspice_config: ncov-tutorial/auspice-config-custom-data.json
@@ -34,7 +34,7 @@ builds:
 # the same maximum collection date for strains in all sections
 # of the subsampling scheme below.
 subsampling:
-  idaho_scheme:
+  rusk_scheme:
     # Include all data from Idaho.
     # When the workflow merges metadata from multiple
     # inputs, it creates a boolean column for each input to
